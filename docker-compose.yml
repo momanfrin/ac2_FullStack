@@ -11,7 +11,7 @@ services:
 
     db:
       image: mysql:5.7
-      enviroment:
-        MYSQL_ROOT_PASSWORD: mudar123
+      environment:
+          MYSQL_ROOT_PASSWORD: mudar123
       ports:
-      - "3309:3309"
+        - "3309:3309"
