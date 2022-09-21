@@ -1,14 +1,17 @@
-web:
-  build: .
-  command: python app.py
-  links: 
-  - db
-  ports:
-  - "5000:5000"
+version: "3.8"
 
-db:
-  image: mysql:5.7
-  enviroment:
-    MYSQL_ROOT_PASSWORD: mudar123
-  ports:
-  - "3309:3309"
+services:
+    web:
+      build: .
+      command: python app.py
+      links: 
+      - db
+      ports:
+      - "5000:5000"
+
+    db:
+      image: mysql:5.7
+      enviroment:
+        MYSQL_ROOT_PASSWORD: mudar123
+      ports:
+      - "3309:3309"
